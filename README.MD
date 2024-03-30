@@ -22,4 +22,7 @@ Este projeto é desenvolvido por estudantes da UNIVESP. Tem como objetivo auxili
 * Criar ambiente virtual com o comando: virtualenv .venv
 * Ativar ambiente .venv com o comando: Linux -> source .venv/bin/activate, para desativar: deactivate
 * No ambiente virtual .venv inicializar o Django: pip install django
-* Criar setup Django: django-admin startproject setup
+* Utilize o comando, pip freeze, para saber a versão do django.
+* Criar setup Django: django-admin startproject escolaativa
+* Executar o comando: python3 manage.py migrate, este comando vai inicializar os módulos.
+* Executar o comando: python3 manage.py runserver, este comando vai abrir a página.
