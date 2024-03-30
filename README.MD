@@ -16,8 +16,10 @@ Este projeto é desenvolvido por estudantes da UNIVESP. Tem como objetivo auxili
 
 # Configuração Inicial
 
-## pip
-
-## VirtualVenv
-
-## Django
+## Ambiente virtual para desenvolvimento
+* Abrir terminal
+* Entrar na pasta pi3b12024 com o comando: cd 
+* Criar ambiente virtual com o comando: virtualenv .venv
+* Ativar ambiente .venv com o comando: Linux -> source .venv/bin/activate, para desativar: deactivate
+* No ambiente virtual .venv inicializar o Django: pip install django
+* Criar setup Django: django-admin startproject setup
