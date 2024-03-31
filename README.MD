@@ -5,6 +5,7 @@
 * [Ferramentas do Projeto](#Ferramentas-do-Projeto)
 * [Configuração Inicial](#Configuração-Inicial)
 * [Django Framework](#Django-Framework)
+* [SQL da Base de Dados](#SQL-da-Base-de-Dados)
 
 # Apresentação do Projeto
 Este projeto é desenvolvido por estudantes da UNIVESP. Tem como objetivo auxiliar professores a aplicar em sala de aula atividades em grupos.
@@ -14,6 +15,9 @@ Este projeto é desenvolvido por estudantes da UNIVESP. Tem como objetivo auxili
 * Br Modelo - banco de dados:
 * Pencil Project - editor de telas:
 * Visual Code - editor de programação
+
+## Sintaxe Básica README.md
+https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
 # Configuração Inicial
 
@@ -64,3 +68,56 @@ Primeiro devemos criar um ambiente virtual.
 
 ## Criando um app Django
 * Dentro da pasta escolaativa digite <b>./manage.py startapp main</b>
+
+# SQL da Base de Dados
+CREATE TABLE Turma 
+( 
+ id_turma INT PRIMARY KEY AUTO_INCREMENT,  
+ periodo VARCHAR(10),  
+ serie VARCHAR(5),  
+ data_criacao DATE,  
+); 
+
+CREATE TABLE Equipe 
+( 
+ id_equipe INT PRIMARY KEY AUTO_INCREMENT,  
+ nome VARCHAR(50),  
+ lider VARCHAR(20),  
+ idTurma INT,  
+); 
+
+CREATE TABLE Atitude 
+( 
+ id_atitude INT PRIMARY KEY AUTO_INCREMENT,  
+ pontos INT,  
+ descricao VARCHAR(200),  
+ data_criacao DATE,  
+); 
+
+CREATE TABLE Missao 
+( 
+ id_missao INT PRIMARY KEY AUTO_INCREMENT,  
+ concluida INT,  
+ descricao VARCHAR(200),  
+ data_criacao DATE,  
+ data_termino DATE,  
+); 
+
+CREATE TABLE eq_tem_atitude 
+( 
+ id_equipe INT,  
+ id_atitude INT PRIMARY KEY,  
+); 
+
+CREATE TABLE eq_tem_missao 
+( 
+ id_equipe INT,  
+ id_missao INT PRIMARY KEY,  
+); 
+
+ALTER TABLE Equipe ADD FOREIGN KEY(idTurma) REFERENCES Turma (idTurma)
+ALTER TABLE eq_tem_atitude ADD FOREIGN KEY(id_equipe) REFERENCES Equipe (id_equipe)
+ALTER TABLE eq_tem_atitude ADD FOREIGN KEY(id_atitude) REFERENCES Atitude (id_atitude)
+ALTER TABLE eq_tem_missao ADD FOREIGN KEY(id_equipe) REFERENCES Equipe (id_equipe)
+ALTER TABLE eq_tem_missao ADD FOREIGN KEY(id_missao) REFERENCES Missao (id_missao)
+
