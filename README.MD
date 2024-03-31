@@ -40,7 +40,7 @@ Parte da aplicação que se comunica com o SGBD por meio de mapeamento objeto-re
 ### View
 Corresponde à camada que controla a interação entre os dados (Model) e a apresentação (Template). São as regras de neǵocios da aplicação.
 
-## Criando um Novo Projeto em Django
+## Configurando um Novo Projeto em Django
 Primeiro devemos criar um ambiente virtual. 
 
 ### Linux - Ambiente Virtual
@@ -61,3 +61,6 @@ Primeiro devemos criar um ambiente virtual.
 * Digite <b>./manage.py migrate</b> para inicializar os módulos.
 * Digite <b>./manage.py runserver</b> para inicializar o servidor com a página web.
 * No navegador entre no endereço <b>http://127.0.0.1:8000/</b>
+
+## Criando um app Django
+* Dentro da pasta escolaativa digite <b>./manage.py startapp main</b>
