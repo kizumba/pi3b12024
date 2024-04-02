@@ -6,6 +6,7 @@
 * [Configuração Inicial](#Configuração-Inicial)
 * [Django Framework](#Django-Framework)
 * [SQL da Base de Dados](#SQL-da-Base-de-Dados)
+* [Teste](#Testes)
 
 # Apresentação do Projeto
 Este projeto é desenvolvido por estudantes da UNIVESP. Tem como objetivo auxiliar professores a aplicar em sala de aula atividades em grupos.
@@ -121,3 +122,9 @@ ALTER TABLE eq_tem_atitude ADD FOREIGN KEY(id_atitude) REFERENCES Atitude (id_at
 ALTER TABLE eq_tem_missao ADD FOREIGN KEY(id_equipe) REFERENCES Equipe (id_equipe)
 ALTER TABLE eq_tem_missao ADD FOREIGN KEY(id_missao) REFERENCES Missao (id_missao)
 
+# Testes
+## Testes de unidade
+São testes que verificam uma porção específica do seu código. Pode ser um método, função, classe etc.
+
+## Testes de integridade
+São testes mais amplos, que checam aplicações inteiras e combinam diferentes trechos de código para confirmar se eles se comportam corretamente.

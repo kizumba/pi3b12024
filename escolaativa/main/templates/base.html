@@ -11,10 +11,12 @@
     <title>Escola Ativa</title>
 </head>
 <body>
-    <h1>Teste do Bootstrap</h1>
+    {% include 'snippets/barra_navegacao.html' %}
 
     {% block conteudo %}
     {% endblock conteudo%}
+
+    {% include 'snippets/rodape.html' %}
 
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
