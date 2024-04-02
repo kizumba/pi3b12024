@@ -6,7 +6,7 @@
 * [Configuração Inicial](#Configuração-Inicial)
 * [Django Framework](#Django-Framework)
 * [SQL da Base de Dados](#SQL-da-Base-de-Dados)
-* [Teste](#Testes)
+* [Testes](#Testes)
 
 # Apresentação do Projeto
 Este projeto é desenvolvido por estudantes da UNIVESP. Tem como objetivo auxiliar professores a aplicar em sala de aula atividades em grupos.
