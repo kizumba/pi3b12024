@@ -1,10 +1,13 @@
 from django.db import models
 
+
+PERIODO = (('M','Manhã'),('T','Tarde'),('N','Noite'))
+
 # Create your models here.
 class Turma(models.Model):
     id_turma = models.AutoField(primary_key=True)
     serie = models.CharField(max_length=10)
-    periodo = models.CharField(max_length=15)
+    periodo = models.CharField(choices=PERIODO,max_length=1)
     data_criacao = models.DateField()
 
     def __str__(self):
