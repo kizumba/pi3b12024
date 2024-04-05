@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 
 PERIODO = (('M','Manhã'),('T','Tarde'),('N','Noite'))
 
@@ -8,17 +8,17 @@ class Turma(models.Model):
     id_turma = models.AutoField(primary_key=True)
     serie = models.CharField(max_length=10)
     periodo = models.CharField(choices=PERIODO,max_length=1)
-    data_criacao = models.DateField()
+    data_criacao = models.DateField(auto_now=True)
 
     def __str__(self):
         return f'Turma: Série: {self.serie}, período: {self.periodo} criada em {self.data_criacao}'
-
+    
 class Atitude(models.Model):
     id_atitude = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=20)
     pontos = models.IntegerField()
     descricao = models.TextField()
-    data_criacao = models.DateField()
+    data_criacao = models.DateField(auto_now=True)
 
     def __str__(self):
         return f'Atitude: {self.nome}, Descrição: {self.descricao}, Pontos: {self.pontos}'
@@ -28,7 +28,7 @@ class Missao(models.Model):
     nome = models.CharField(max_length=20)
     concluida = models.BooleanField()
     descricao = models.TextField()
-    data_criacao = models.DateField()
+    data_criacao = models.DateField(auto_now=True)
     data_finalizacao = models.DateField()
 
     def __str__(self):
@@ -55,3 +55,9 @@ class Equipe(models.Model):
         print('Missões:\n')
         for missao in self.missoes:
             print(f'Missão: {missao}')
+
+def get_absolute_url(self):
+        return reverse('main:listar_turmas')
+    
+def get_absolute_url(self):
+    return reverse('main:detalhes_turma')

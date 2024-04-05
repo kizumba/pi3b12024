@@ -130,10 +130,11 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # MINHAS DEFINÇÕES
-#STATICFILES_DIRS = (
- #   os.path.join(BASE_DIR, 'static'),
-#)
-
+'''
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+'''
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'upload')
@@ -168,3 +169,6 @@ LOGGING = {
         },
     },
 }
+
+EMAIL_FALE_CONOSCO = 'univesp@pi3.com'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
