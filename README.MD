@@ -128,3 +128,5 @@ São testes que verificam uma porção específica do seu código. Pode ser um m
 
 ## Testes de integridade
 São testes mais amplos, que checam aplicações inteiras e combinam diferentes trechos de código para confirmar se eles se comportam corretamente.
+
+Testando git
